@@ -73,7 +73,6 @@ public class MainActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				page = 3;
 				changeView();
-				onResume();
 			}
 		});
 	}
@@ -98,6 +97,7 @@ public class MainActivity extends Activity {
 			Log.i("yxy", String.valueOf(mLl_view.getChildCount()));
 			if (mLl_view.getChildCount() != 3) {
 				mLl_view.addView(view3);
+				onResume();
 			}
 		}
 	}
